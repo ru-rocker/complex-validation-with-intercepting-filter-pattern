@@ -13,7 +13,8 @@ public abstract class AbstractValidator implements IValidator{
     @Override
     public void validate(ValidationContext context) {
         if(isActive()) {
-            Rider rider = context.getRiderMap().get(Objects.requireNonNullElse(getRiderCode(), ""));
+            Rider rider = context.getRiderMap().get(Objects.
+                    requireNonNullElse(getRiderCode(), ""));
             doValidate(context, rider);
         }
     }
